@@ -3,6 +3,9 @@ import glob from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 
+export const apiKey = '14594113-3565582ddf884392468dadf7f';
+export const apiUrl = 'https://pixabay.com/api/';
+
 export default defineConfig(({ command }) => {
   return {
     define: {
