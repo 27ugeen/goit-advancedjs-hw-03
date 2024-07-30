@@ -1,4 +1,5 @@
-import { apiKey, apiUrl } from '../../config.js';
+const apiKey = '14594113-3565582ddf884392468dadf7f';
+const apiUrl = 'https://pixabay.com/api/';
 
 export function fetchImages(searchQuery) {
   const searchParams = new URLSearchParams({
