@@ -12,7 +12,6 @@ form.addEventListener('submit', event => {
   event.preventDefault();
   const searchData = searchInput.value.trim();
   gallery.innerHTML = '';
-  toggleLoader(true);
 
   if (searchData === '') {
     iziToast.error({
@@ -21,7 +20,10 @@ form.addEventListener('submit', event => {
       position: 'topRight',
       transitionIn: 'fadeInDown',
     });
+    toggleLoader(false);
   } else {
+    toggleLoader(true);
+
     fetchImages(searchData)
       .then(hits => {
         if (hits.length === 0) {
